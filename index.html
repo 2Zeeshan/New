@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 50%;
+            height: 300px;
+            background-color: black;
+            color: wheat;
+            text-align: center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <label for="text">Num1</label><br>
+        <input type="text" id="num1" placeholder="Type">
+        <br>
+        <label for="text">Num2</label><br>
+        <input type="text" name="" id="num2"><br>
+
+        <label for="text">Total</label><br>
+        <input type="text" name="" id="Totals" disabled><br>
+
+<button type="button" onclick="Add()">Add </button>
+<button type="button" onclick="Reset()">Reset</button>
+<button type="button" onclick="Multiply()">Multi</button>
+<button type="button" onclick="Division()">Division</button>
+<button type="button" onclick="Minus()">Minus</button>
+
+
+
+
+    </div>
+
+    <script>
+function Reset(){
+    document.getElementById('num1').value="";
+    document.getElementById('num2').value="";
+    document.getElementById('Totals').value="";
+
+}
+function Add(){
+    let NumOne= Number (document.getElementById("num1").value);
+    let Numtwo= Number (document.getElementById("num2").value);
+    let SumTotal=NumOne + Numtwo;
+    document.getElementById("Totals").value = String(SumTotal);
+}
+
+
+
+function Multiply (){
+    let NumOne= Number (document.getElementById("num1").value);
+    let Numtwo= Number (document.getElementById("num2").value);
+    let SumTotal=NumOne * Numtwo;
+    document.getElementById("Totals").value = String(SumTotal);
+}
+
+function Division (){
+    let NumOne= Number (document.getElementById("num1").value);
+    let Numtwo= Number (document.getElementById("num2").value);
+    let SumTotal=NumOne / Numtwo;
+    document.getElementById("Totals").value = String(SumTotal);
+}
+
+function Minus (){
+    let NumOne= Number (document.getElementById("num1").value);
+    let Numtwo= Number (document.getElementById("num2").value);
+    let SumTotal=NumOne - Numtwo;
+    document.getElementById("Totals").value = String(SumTotal);
+}
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
